@@ -82,7 +82,6 @@ A simple visual (also included in the repo as `architecture.svg`):
 
 **Propagation expectations**
 - DNS change (DuckDNS update): usually visible within seconds to a few minutes.
-- TTL and caching in user ISPs may introduce delays (up to 1 hour in worst-case ISP caching).
 - Certificate availability: If you provided your own cert, TLS is immediate after apply. If system generates self-signed cert, it’s created during provisioning (~seconds).
 
 **Validation checks**
@@ -126,7 +125,7 @@ A simple visual (also included in the repo as `architecture.svg`):
 A: Yes — provide PEM and KEY during the tenant request. The provisioning process will upload and use them.
 
 **Q: How long will provisioning take?**  
-A: ~8–12 minutes typically.
+A: ~5–10 minutes typically.
 
 **Q: What happens if my tenant needs more compute resources?**  
 A: You can request instance type change or choose autoscaling production tier; we will schedule a migration/resize.
