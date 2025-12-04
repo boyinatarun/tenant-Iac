@@ -14,7 +14,7 @@ resource "aws_key_pair" "tenant_key" {
 
 ######## secrets manager #########
 resource "aws_secretsmanager_secret" "tenant_key_secret" {
-  name        = "${var.tenant_name}-key-stss21"
+  name        = "${var.tenant_name}-secret-key-tenant-ssh"
   description = "SSH private key for ${var.tenant_name}"
   depends_on  = [ aws_key_pair.tenant_key ] 
 }
