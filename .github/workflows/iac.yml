@@ -56,14 +56,16 @@ jobs:
           role-duration-seconds: 3600
 
       - name: Terraform Initialize
-        run: terraform init \
-          -backend-config=backend/${{ inputs.region }}/${{ inputs.environment }}.s3.backend \
-          -input=false 
+        run: |
+          terraform init \
+            -backend-config=backend/${{ inputs.region }}/${{ inputs.environment }}.s3.backend \
+            -input=false
 
       - name: Terraform Plan
-        run: terraform plan \
-          -var-file=variables/${{ inputs.region }}/${{ inputs.environment }}.tfvars \
-          -out=tfplan
+        run: |
+          terraform plan \
+            -var-file=variables/${{ inputs.region }}/${{ inputs.environment }}.tfvars \
+            -out=tfplan
 
 
   Approval:
@@ -107,15 +109,17 @@ jobs:
           role-duration-seconds: 3600
 
       - name: Terraform Initialize
-        run: terraform init \
-          -backend-config=backend/${{ inputs.region }}/${{ inputs.environment }}.s3.backend \
-          -input=false 
+        run: |
+          terraform init \
+            -backend-config=backend/${{ inputs.region }}/${{ inputs.environment }}.s3.backend \
+            -input=false
 
       - name: Terraform Apply
         env:
           TF_VAR_region: ${{ inputs.region }}
           TF_VAR_environment: ${{ inputs.environment }}
-        run: terraform apply \
-          -input=false \
-          -var-file=variables/${{ inputs.region }}/${{ inputs.environment }}.tfvars \
-          -auto-approve
+        run: |
+          terraform apply \
+            -input=false \
+            -var-file=variables/${{ inputs.region }}/${{ inputs.environment }}.tfvars \
+            -auto-approve
