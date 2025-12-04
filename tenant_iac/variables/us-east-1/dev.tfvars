@@ -31,14 +31,14 @@ duckdns_token = "791d1bb3-df97-422e-a95a-77ba8ee0d260"
 
 
 tenants = {
-  tenant21 = {
-    domain_name      = "tenant21"
-    vpc_cidr         = "10.0.0.0/16"
-    public_subnets   = ["10.0.1.0/24", "10.0.2.0/24"]
-    private_subnets  = ["10.0.10.0/24", "10.0.11.0/24"]
-    enable_nat       = true
-    instance_type    = "t2.micro"
-    ec2_subnet_index = 0
-    ssh_cidr        = "106.215.174.165/32"
-  }
+  # tenant21 = {
+  #   # domain_name      = "tenant21"
+  #   # vpc_cidr         = "10.0.0.0/16"
+  #   # public_subnets   = ["10.0.1.0/24", "10.0.2.0/24"]
+  #   # private_subnets  = ["10.0.10.0/24", "10.0.11.0/24"]
+  #   # enable_nat       = true
+  #   # instance_type    = "t2.micro"
+  #   # ec2_subnet_index = 0
+  #   # ssh_cidr        = "106.215.174.165/32"
+  # }
 }
