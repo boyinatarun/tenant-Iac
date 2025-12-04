@@ -1,4 +1,4 @@
 bucket         = "tfstate-demo-bucket-terraform-91"
-key            = "iac.tfstate"
+key            = "iac_tenant.tfstate"
 region         = "us-east-1"
 dynamodb_table = "terraform-lock-table"
