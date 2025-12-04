@@ -20,6 +20,8 @@ variable "tenants" {
     ssh_cidr        = optional(string, "")
     custom_cert_pem  = optional(string)
     custom_key_pem   = optional(string)
+    private_subnets  = optional(list(string), [])
+    enable_nat       = optional(bool, true)
   }))
 }
 

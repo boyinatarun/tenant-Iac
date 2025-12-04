@@ -32,3 +32,14 @@ variable "custom_key_pem" {
   type = string
   default = ""
 }
+
+variable "private_subnets" {
+  type = list(string)
+  default = []
+}
+
+variable "enable_nat" {
+  type        = bool
+  default     = true
+  description = "If true create NAT Gateway & Private routing"
+}
