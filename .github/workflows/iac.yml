@@ -1,4 +1,4 @@
-name: lambda_deployment
+name: tenant_iac_deployment
 
 on:
   workflow_dispatch:
